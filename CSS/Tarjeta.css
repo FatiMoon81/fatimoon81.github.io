@@ -1,0 +1,234 @@
+* {  
+  box-sizing: border-box;  
+}  
+
+html, body {  
+  margin: 0;  
+  padding: 0;  
+}  
+
+body {
+    height: 100vh;
+    font-family: 'Courier New', Courier, monospace;
+    background-image: url(../Imagenes/fondo-vintage.jpg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.book {
+    aspect-ratio: 3/4;
+    width: 35vw;
+    position: relative;
+    transition-duration: 1s;
+    perspective: none;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+input {
+    display: none;
+}
+
+p {
+    font-size: 1.5vw;
+    padding: 0;
+    margin: 0;
+}
+
+.cover, .back-cover {
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 5px rgb(41, 41, 41);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cover {
+    position: absolute;
+    z-index: 10;
+    transform-origin: center left;
+    transition: 1.5s;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+}
+
+.front-face label, .back-face label {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.back-cover {
+    position: absolute;
+    z-index: -1;
+}
+
+.cover img, .back-cover img{
+    width: 100%;
+    height: 100%;
+}
+
+.sheet {
+    position: absolute;
+    background-color: antiquewhite;
+    border-left: solid 1px black;
+    aspect-ratio: 3/4;
+    width: 95%;
+    margin-top: auto;
+    transform-origin: left;
+    transform-style: preserve-3d;
+    transform: rotateY(0deg);
+    transition-duration: 1.5s;
+}
+
+.small-img {
+    max-height:35%;    
+    display: block; 
+}
+
+.medium-img {
+    max-height:40%;    
+    display: block; 
+}
+
+.tall-img {
+    max-width: 95%; 
+    max-height:90%;    
+    display: block; 
+}
+
+.wide-img {
+    max-width: 95%;
+    display: block;
+}
+
+.front-page, .front-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.back-page, .back-face {
+    transform: rotateY(180deg);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.front-page {
+    padding: 2vw;
+}
+
+.back-page {
+    padding: 2vw;
+}
+
+.next, .prev {
+    position: absolute;
+    bottom: 1em;
+    cursor: pointer;
+}
+
+.next {
+    right: 1em;
+}
+
+.prev {
+    left: 1em;
+}
+
+#sheet1 {
+    z-index: 9;
+}
+
+#sheet2 {
+    z-index: 8;
+}
+
+#sheet3 {
+    z-index: 7;
+}
+
+#sheet4 {
+    z-index: 6;
+}
+
+#sheet5 {
+    z-index: 5;
+}
+
+#sheet6 {
+    z-index: 4;
+}
+
+#sheet7 {
+    z-index: 3;
+}
+
+#sheet8 {
+    z-index: 2;
+}
+
+#sheet9 {
+    z-index: 1;
+}
+
+#checkbox-cover:checked ~ .book {
+    transform: translateX(17vw);
+}
+
+#checkbox-cover:checked ~ .book .cover {
+    transition: transform 1.5s, z-index 0.5s 0.5s;
+    transform: rotateY(-180deg);
+    z-index: 0;
+}
+
+#checkbox-sheet1:checked ~ .book #sheet1 {
+    transform: rotateY(-180deg);
+    z-index: 1;
+}
+
+#checkbox-sheet2:checked ~ .book #sheet2 {
+    transform: rotateY(-180deg);
+    z-index: 2;
+}
+
+#checkbox-sheet3:checked ~ .book #sheet3 {
+    transform: rotateY(-180deg);
+    z-index: 3;
+}
+
+#checkbox-sheet4:checked ~ .book #sheet4 {
+    transform: rotateY(-180deg);
+    z-index: 4;
+}
+
+#checkbox-sheet5:checked ~ .book #sheet5 {
+    transform: rotateY(-180deg);
+    z-index: 5;
+}
+
+#checkbox-sheet6:checked ~ .book #sheet6 {
+    transform: rotateY(-180deg);
+    z-index: 6;
+}
+
+#checkbox-sheet7:checked ~ .book #sheet7 {
+    transform: rotateY(-180deg);
+    z-index: 7;
+}
+
+#checkbox-sheet8:checked ~ .book #sheet8 {
+    transform: rotateY(-180deg);
+    z-index: 8;
+}
+
+#checkbox-sheet9:checked ~ .book #sheet9 {
+    transform: rotateY(-180deg);
+    z-index: 9;
+}
