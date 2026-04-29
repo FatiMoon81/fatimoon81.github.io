@@ -25,6 +25,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: left;
+    transform-style: preserve-3d;
 }
 
 input {
@@ -78,6 +79,7 @@ p {
     aspect-ratio: 3/4;
     width: 95%;
     margin-top: auto;
+
     transform-origin: left;
     transform-style: preserve-3d;
     transform: rotateY(0deg);
