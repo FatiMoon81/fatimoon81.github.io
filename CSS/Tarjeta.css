@@ -74,8 +74,6 @@ p {
 
 .sheet {
     position: absolute;
-    background-color: antiquewhite;
-    border-left: solid 1px black;
     aspect-ratio: 3/4;
     width: 95%;
     margin-top: auto;
@@ -123,10 +121,12 @@ p {
 }
 
 .front-page {
+    background-color: antiquewhite;
     padding: 2vw;
 }
 
 .back-page {
+    background-color: rgb(252, 230, 204);
     padding: 2vw;
 }
 
@@ -228,9 +228,4 @@ p {
 #checkbox-sheet8:checked ~ .book #sheet8 {
     transform: rotateY(-180deg);
     z-index: 8;
-}
-
-#checkbox-sheet9:checked ~ .book #sheet9 {
-    transform: rotateY(-180deg);
-    z-index: 9;
 }
